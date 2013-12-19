@@ -10,10 +10,10 @@ initScreen = function() {
 
    var image = new Kinetic.Image({
    	id: 'bg',
-   	image : Kinetic.Global.Assets['bg'],
+   	image : Kinetic.Assets['bg'],
    });
 
-	var layer = new Kinetic.Plugins.PinchLayer({
+	var layer = new Kinetic.PinchLayer({
 		container: stage,
 		width: image.getWidth(),
 		height: image.getHeight()
@@ -28,7 +28,7 @@ initScreen = function() {
 
  var image2 = new Kinetic.Image({
 	id: 'settings',
-	image: Kinetic.Global.Assets['settings'],
+	image: Kinetic.Assets['settings'],
 	x: stage.getWidth() - 85,
 	y: stage.getHeight() - 85
  });
@@ -36,7 +36,7 @@ initScreen = function() {
   
  var image3 = new Kinetic.Image({
 	id: 'back',
-	image: Kinetic.Global.Assets['back'],
+	image: Kinetic.Assets['back'],
 	x: 10,
 	y: stage.getHeight() - 85
  });
@@ -69,7 +69,7 @@ var images = [{  id: "bg", src: "img/test2.jpg" },
               { id: "settings", src: "img/UI_button_info.png" },
               { id: "back", src: "img/UI_button_exit.png"} ]
 
-var loader = new Kinetic.Plugins.Loader(images);
+var loader = new Kinetic.Loader(images);
 
 //Function called after each loaded image
 loader.onProgress(function(event) { 
