@@ -1,3 +1,4 @@
+if(!Kinetic.Plugins) Kinetic.Plugins = {};
 Kinetic.Plugins.PinchLayer = function(config) {
 	self = this;
 	Kinetic.Layer.call(self, config);
@@ -76,7 +77,8 @@ Kinetic.Plugins.PinchLayer.prototype.mouseScroll = function(e) {
   	  e.cancelBubble = true;
   	  e.cancel = true;
   	  e.returnValue = false;
-  return false;}
+  return false;
+}
 
 Kinetic.Plugins.PinchLayer.prototype.dragStarted = function(event) {
  	if (!event.touches || event.touches.length <= 1) {
